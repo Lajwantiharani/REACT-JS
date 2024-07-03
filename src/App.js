@@ -1,6 +1,5 @@
-
-import './App.css';
-
+import "./App.css";
+/*
 function App() {
  const name = <h1>Pedro</h1>
  const age = <h2>23</h2>
@@ -46,4 +45,33 @@ const Job =(props) =>{
     </div>
     
     );}
+export default App;
+function App() {
+  const names = ["laj", "urooj", "muqu"];
+
+  return (
+    <div className="App">
+      {names.map((name, key) => {
+        return <h1 key={key}>{name}</h1>;
+      })}
+    </div>
+  );
+}*/
+function App() {
+    const planets = [
+      { name: "Mars", isGasPlanet: false },
+      { name: "Earth", isGasPlanet: false },
+      { name: "Jupiter", isGasPlanet: true },
+      { name: "Venus", isGasPlanet: false },
+      { name: "Neptune", isGasPlanet: true },
+      { name: "Uranus", isGasPlanet: true },
+    ];
+    return (
+        <div className="App">
+          {planets.map(
+            (planet, key) => planet.isGasPlanet && <h1> {planet.name} </h1>
+          )}
+        </div>
+      );
+    }
 export default App;
