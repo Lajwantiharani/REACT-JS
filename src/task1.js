@@ -1,28 +1,17 @@
-import  styles from'./App.module.css';
+import React from 'react';
 
-function App (){
-return (
+function task1() {
+  const age = 19;
+  const isGreen = false;
+  return (
+    <div className="App">
+      {age >= 18 ? <h1>over age</h1> : <h2>under age</h2>}
+<h1 style={{color:isGreen ? "green":"red"}}>this is color </h1>
 
-<div className={styles.App}>
-<h1  className={styles.name}>LAJ</h1>
+      {isGreen &&<button>this is button </button>}
+    </div>
 
-
-</div>
-
-
-    
-);
-
-
-
+  );
 }
 
-
-
-
-
-
-
-
-
-export default App;
+export default task1;
