@@ -11,7 +11,14 @@ function App() {
   {age} 
   {email}
   <User name="laj" age={23} />
+  
+ 
+<Job salary={12345} position="CEO" company="google" />
+
+<Job salary={1245} position="junior" company="netflix" />
+  
   </div>
+
  );
  return <div className="App">
     {user}
@@ -26,9 +33,17 @@ return (
 <h1>lajwanti </h1>
 <h2>   lajwanti@gmail.com</h2>
 <h1>{props.name}</h1>
+<h1>{props.age}</h1>
 </div>
 
-)
-
-}
+);}
+const Job =(props) =>{
+    return (
+        <div>
+    <h1>{props.salary} </h1>
+    <h1>{props.postion} </h1>
+    <h2>{props.company}</h2>
+    </div>
+    
+    );}
 export default App;
