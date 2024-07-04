@@ -56,7 +56,7 @@ function App() {
       })}
     </div>
   );
-}*/
+
 function App() {
     const planets = [
       { name: "Mars", isGasPlanet: false },
@@ -73,5 +73,40 @@ function App() {
           )}
         </div>
       );
-    }
+    }}
+
+import { useState } from "react";
+function App() {
+  const [age, setAge] = useState(0);
+  const IncAge = () => {
+setAge(age + 1);
+
+
+  };
+  return (
+    <div className="App">
+      {age}
+      <button onClick={IncAge}>InCRAESE age </button>
+    </div>
+  );
+}
+
+export default App;
+*/
+import { useState } from "react";
+function App() {
+  const [Inputval, setInputval] = useState("");
+
+
+
+  const handleInputChange =(event)=>{
+  console.log(event.target.value);
+};
+    return (
+    <div className="App">
+     <input type =""text onChange={handleInputChange}/>
+     {Inputval}
+    </div>
+  );
+}
 export default App;
